@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import "./App.css";
 import CustomLoader from "./reusables/CustomLoader";
+import AppRouter from "./router/AppRouter";
 
 function App() {
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -8,18 +8,11 @@ function App() {
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 2000);
-
     return () => clearTimeout(timer);
   }, []);
   return (
     <>
-      {isLoading ? (
-        <CustomLoader text="" />
-      ) : (
-        <>
-          Hello this is my portfolio
-        </>
-      )}
+      <AppRouter />
     </>
   );
 }
