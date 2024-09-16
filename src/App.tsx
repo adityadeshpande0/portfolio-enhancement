@@ -1,18 +1,25 @@
+import { useEffect, useState } from "react";
 import "./App.css";
 import CustomLoader from "./reusables/CustomLoader";
 
 function App() {
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
   return (
     <>
-      <div>
-        <CustomLoader text=""/>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      {isLoading ? (
+        <CustomLoader text="" />
+      ) : (
+        <>
+          Hello this is my portfolio
+        </>
+      )}
     </>
   );
 }
