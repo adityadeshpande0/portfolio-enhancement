@@ -1,0 +1,24 @@
+.main-container-footer {
+    .branch-container {
+      :hover {
+        background-color: red; // Changes background color to red on hover
+      }
+    }
+  
+    .icons-container {
+      :hover {
+        background-color: red; // Optionally, apply hover effect here as well
+      }
+    }
+  
+    .footer-text {
+      font-size: 8px !important; // Reduces font size for all elements with class 'footer-text'
+    }
+  
+    .end-container {
+      .footer-text {
+        font-size: 8px !important; // Ensures consistent text size in the end container as well
+      }
+    }
+  }
+  
