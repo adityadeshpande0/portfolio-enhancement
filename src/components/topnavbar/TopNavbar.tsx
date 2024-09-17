@@ -7,7 +7,7 @@ const TopNavbar: React.FC = () => {
 
   return (
     <div className="main-container container-fluid bg-dark">
-      <div className="row align-items-center">
+      <div className="row align-items-center m-0">
         <div className="col-auto d-flex">
           <img src={vscode} alt="vs-code" className="logo-navbar" />
           {navLinks.map((link) => (
