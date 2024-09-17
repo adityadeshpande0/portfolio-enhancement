@@ -1,7 +1,8 @@
 import React from "react";
+import AlertDialog from "../../components/popups/AlertDialog";
 
 const Home: React.FC = () => {
-  return <div>HomeScreen</div>;
+  return <AlertDialog/>;
 };
 
 export default Home;

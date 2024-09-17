@@ -13,7 +13,7 @@ const AppRouter: React.FC = () => {
        <Route path="/" Component={Home}/>
        <Route path='/projects' Component={Projects}/>
       </Routes>
-      <Footer/>
+      {/* <Footer/> */}
     </Router>
   );
 };
